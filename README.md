@@ -29,8 +29,8 @@ CREATE TABLE patents_data (
 ) PRIMARY KEY (id);
 
 ## Prepare & Load Patent Data
-For building the Patent Search App, we will use the Patent Published dataset in BigQuery. For ease of implementation, I have already prepared the data and made it available here.
-Run the INSERT scripts in Spanner Studio Editor. This should populate the patents_data table we created in the previous step. This is the patent data we will use for matching with the user search text.
+For building the Patent Search App, we will use the Patent Published dataset in BigQuery. For ease of implementation, I have already prepared the data and made it available [[here]([url](https://github.com/AbiramiSukumaran/spanner-gemini-search/blob/main/insert_into_patents_data.sql))](url).
+Run the INSERT scripts[https://github.com/AbiramiSukumaran/spanner-gemini-search/blob/main/insert_into_patents_data.sql](url) in Spanner Studio Editor. This should populate the patents_data table we created in the previous step. This is the patent data we will use for matching with the user search text.
 
 ## Create Remote Model for Gemini 1.0 Pro
 We will convert the patent abstracts into a consolidated summary consisting of a title and keywords. For this we will use the Gemini 1.0 Pro model from Vertex AI remotely from Spanner. Run the following DDL from Spanned Studio Editor:
